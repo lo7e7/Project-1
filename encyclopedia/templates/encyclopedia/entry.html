@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+   
+    {% if entrypage %}
+      <h1>{{title}}</h1>
+      {{ entrypage }}<br><br>
+      <a href="/wiki/edit-page/{{title}}", class="button">Edit</a>
+    {% else %}
+        <p> Sorry, this page wasn't found</p>
+    {% endif %}
+    
+    
+{% endblock %}
